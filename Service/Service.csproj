@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Helpers\" />
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Admin\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="DTOs\Admin\Groups\" />
+    <None Remove="DTOs\Admin\Students\" />
+    <None Remove="DTOs\Admin\Educations\" />
+    <None Remove="DTOs\Admin\Rooms\" />
+    <None Remove="DTOs\Admin\Teachers\" />
+    <None Remove="DTOs\Account\" />
+    <None Remove="Helpers\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Admin\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="DTOs\Admin\Groups\" />
+    <Folder Include="DTOs\Admin\Students\" />
+    <Folder Include="DTOs\Admin\Educations\" />
+    <Folder Include="DTOs\Admin\Rooms\" />
+    <Folder Include="DTOs\Admin\Teachers\" />
+    <Folder Include="DTOs\Account\" />
+    <Folder Include="Helpers\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+  </ItemGroup>
+</Project>

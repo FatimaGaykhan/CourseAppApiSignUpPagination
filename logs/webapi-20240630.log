@@ -1,0 +1,22 @@
+2024-06-30 22:35:11.837 +04:00  INF  Now listening on: https://localhost:7031
+2024-06-30 22:35:11.858 +04:00  INF  Now listening on: http://localhost:5295
+2024-06-30 22:35:11.860 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-30 22:35:11.860 +04:00  INF  Hosting environment: Development
+2024-06-30 22:35:11.860 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-06-30 22:35:12.922 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-06-30 22:35:13.005 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 83.9108ms
+2024-06-30 22:35:13.061 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-06-30 22:35:13.124 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.5193ms
+2024-06-30 22:35:22.056 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Education/GetAll - -
+2024-06-30 22:35:22.076 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi)'
+2024-06-30 22:35:22.090 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.EducationController (CourseAppApi).
+2024-06-30 22:35:22.528 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-06-30 22:35:22.615 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-06-30 22:35:22.689 +04:00  INF  Education GetAll is working
+2024-06-30 22:35:23.085 +04:00  INF  Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-06-30 22:35:23.125 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-30 22:35:23.134 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi) in 1041.0816ms
+2024-06-30 22:35:23.134 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi)'
+2024-06-30 22:35:23.139 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 1083.1215ms

@@ -1,0 +1,482 @@
+2024-07-02 17:27:34.534 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:27:34.557 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:27:34.559 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:27:34.559 +04:00  INF  Hosting environment: Development
+2024-07-02 17:27:34.559 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:27:35.558 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:27:35.632 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 75.8507ms
+2024-07-02 17:27:35.640 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/swagger-ui.css - -
+2024-07-02 17:27:35.641 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/swagger-ui-bundle.js - -
+2024-07-02 17:27:35.643 +04:00  INF  The file /swagger-ui.css was not modified
+2024-07-02 17:27:35.643 +04:00  INF  The file /swagger-ui-bundle.js was not modified
+2024-07-02 17:27:35.643 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/swagger-ui.css - - - 304 - text/css 3.3881ms
+2024-07-02 17:27:35.643 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 2.5976ms
+2024-07-02 17:27:35.644 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/swagger-ui-standalone-preset.js - -
+2024-07-02 17:27:35.645 +04:00  INF  The file /swagger-ui-standalone-preset.js was not modified
+2024-07-02 17:27:35.645 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 0.4927ms
+2024-07-02 17:27:35.755 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:27:35.823 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 68.3215ms
+2024-07-02 17:28:06.365 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Education/GetAll - -
+2024-07-02 17:28:06.401 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi)'
+2024-07-02 17:28:06.423 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.EducationController (CourseAppApi).
+2024-07-02 17:28:06.864 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:28:06.950 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:28:07.027 +04:00  INF  Education GetAll is working
+2024-07-02 17:28:07.419 +04:00  INF  Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-07-02 17:28:07.460 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-02 17:28:07.468 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi) in 1042.3758ms
+2024-07-02 17:28:07.469 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi)'
+2024-07-02 17:28:07.474 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 1110.6073ms
+2024-07-02 17:28:18.398 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Room/GetAll - -
+2024-07-02 17:28:18.401 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.RoomController.GetAll (CourseAppApi)'
+2024-07-02 17:28:18.405 +04:00  INF  Route matched with {action = "GetAll", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.RoomController (CourseAppApi).
+2024-07-02 17:28:18.435 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:28:18.582 +04:00  INF  Executed DbCommand (114ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedDate], [r].[Name], [r].[SeatCount], [r].[SoftDelete]
+FROM [Rooms] AS [r]
+2024-07-02 17:28:18.597 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Rooms.RoomDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-02 17:28:18.600 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.RoomController.GetAll (CourseAppApi) in 194.1303ms
+2024-07-02 17:28:18.600 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.RoomController.GetAll (CourseAppApi)'
+2024-07-02 17:28:18.600 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Room/GetAll - - - 200 - application/json;+charset=utf-8 202.0498ms
+2024-07-02 17:28:29.374 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Group/Create application/json 73
+2024-07-02 17:28:29.375 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.Create (CourseAppApi)'
+2024-07-02 17:28:29.400 +04:00  INF  Route matched with {action = "Create", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Admin.Groups.GroupCreateDto) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-02 17:28:29.405 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:28:29.626 +04:00  INF  Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([Capacity], [CreatedDate], [EducationId], [Name], [RoomId], [SoftDelete])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-07-02 17:28:29.666 +04:00  INF  Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-02 17:28:29.675 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.Create (CourseAppApi) in 275.0967ms
+2024-07-02 17:28:29.675 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.Create (CourseAppApi)'
+2024-07-02 17:28:29.675 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Group/Create application/json 73 - 201 - application/json;+charset=utf-8 300.9555ms
+2024-07-02 17:28:41.521 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetAll - -
+2024-07-02 17:28:41.523 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi)'
+2024-07-02 17:28:41.527 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-02 17:28:41.528 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:28:41.587 +04:00  INF  Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:28:41.598 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-02 17:28:41.600 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi) in 72.0105ms
+2024-07-02 17:28:41.600 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi)'
+2024-07-02 17:28:41.600 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 79.0519ms
+2024-07-02 17:29:02.879 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Student/GetAll - -
+2024-07-02 17:29:02.924 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.GetAll (CourseAppApi)'
+2024-07-02 17:29:02.978 +04:00  INF  Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:29:02.980 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:29:03.045 +04:00  INF  Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+FROM [Students] AS [s]
+2024-07-02 17:29:03.082 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Students.StudentDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-02 17:29:03.085 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.GetAll (CourseAppApi) in 106.8131ms
+2024-07-02 17:29:03.086 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.GetAll (CourseAppApi)'
+2024-07-02 17:29:03.086 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Student/GetAll - - - 200 - application/json;+charset=utf-8 206.4872ms
+2024-07-02 17:29:12.257 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:29:12.262 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:29:12.266 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:29:12.267 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:29:12.503 +04:00  INF  Executed DbCommand (34ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:29:12.518 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[CreatedDate], [g0].[GroupId], [g0].[SoftDelete], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+WHERE [g].[Id] = @__groupId_0
+ORDER BY [g].[Id]
+2024-07-02 17:29:12.521 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:29:12.575 +04:00  INF  Executed DbCommand (24ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p15='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = Boolean), @p23='?' (DbType = Int32), @p16='?' (Size = 4000), @p17='?' (DbType = Int32), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [GroupStudents] SET [CreatedDate] = @p0, [GroupId] = @p1, [SoftDelete] = @p2, [StudentId] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+INSERT INTO [GroupStudents] ([CreatedDate], [GroupId], [SoftDelete], [StudentId])
+VALUES (@p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [GroupStudents]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+UPDATE [Groups] SET [Capacity] = @p9, [CreatedDate] = @p10, [EducationId] = @p11, [Name] = @p12, [RoomId] = @p13, [SoftDelete] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [Students] SET [Address] = @p16, [Age] = @p17, [CreatedDate] = @p18, [Email] = @p19, [Name] = @p20, [SoftDelete] = @p21, [Surname] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+2024-07-02 17:29:12.587 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-07-02 17:29:12.587 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 320.9735ms
+2024-07-02 17:29:12.587 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:29:12.587 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0 - 200 0 - 330.2687ms
+2024-07-02 17:29:34.594 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=5 - 0
+2024-07-02 17:29:34.621 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:29:34.623 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:29:34.628 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:29:34.639 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:29:34.647 +04:00  INF  Executed DbCommand (8ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[CreatedDate], [g0].[GroupId], [g0].[SoftDelete], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+WHERE [g].[Id] = @__groupId_0
+ORDER BY [g].[Id]
+2024-07-02 17:29:34.654 +04:00  INF  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:29:34.680 +04:00  INF  Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [GroupStudents] ([CreatedDate], [GroupId], [SoftDelete], [StudentId])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [GroupStudents]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-07-02 17:29:34.688 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Students] SET [Address] = @p0, [Age] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4, [SoftDelete] = @p5, [Surname] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+2024-07-02 17:29:34.698 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-07-02 17:29:34.699 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 75.2105ms
+2024-07-02 17:29:34.699 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:29:34.699 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=5 - 0 - 200 0 - 126.5884ms
+2024-07-02 17:29:49.928 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=3 - 0
+2024-07-02 17:29:49.928 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:29:49.928 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:29:49.930 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:29:49.957 +04:00  INF  Executed DbCommand (27ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:29:49.963 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[CreatedDate], [g0].[GroupId], [g0].[SoftDelete], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+WHERE [g].[Id] = @__groupId_0
+ORDER BY [g].[Id]
+2024-07-02 17:29:49.967 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:29:49.976 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [GroupStudents] ([CreatedDate], [GroupId], [SoftDelete], [StudentId])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [GroupStudents]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-07-02 17:29:49.980 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Students] SET [Address] = @p0, [Age] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4, [SoftDelete] = @p5, [Surname] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+2024-07-02 17:29:49.987 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-07-02 17:29:49.987 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 58.9644ms
+2024-07-02 17:29:49.988 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:29:49.988 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=3 - 0 - 200 0 - 59.7710ms
+2024-07-02 17:30:37.360 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:30:37.383 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:30:37.385 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:30:37.385 +04:00  INF  Hosting environment: Development
+2024-07-02 17:30:37.385 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:30:38.427 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:30:38.502 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 77.4312ms
+2024-07-02 17:30:38.638 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:30:38.709 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 71.0615ms
+2024-07-02 17:30:50.226 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:30:50.244 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:30:50.271 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:30:50.702 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:30:50.788 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:30:57.314 +04:00  INF  Executed DbCommand (51ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:31:58.180 +04:00  INF  Executed DbCommand (135ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [g0].[Id], [g0].[CreatedDate], [g0].[GroupId], [g0].[SoftDelete], [g0].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN [GroupStudents] AS [g0] ON [g].[Id] = [g0].[GroupId]
+WHERE [g].[Id] = @__groupId_0
+ORDER BY [g].[Id]
+2024-07-02 17:35:27.334 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:35:27.359 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:35:27.361 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:35:27.361 +04:00  INF  Hosting environment: Development
+2024-07-02 17:35:27.361 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:35:28.353 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:35:28.430 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 78.2092ms
+2024-07-02 17:35:28.483 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:35:28.548 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 64.9845ms
+2024-07-02 17:35:40.697 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:35:40.715 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:35:40.740 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:35:41.164 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:35:41.249 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:35:45.728 +04:00  INF  Executed DbCommand (52ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:35:47.461 +04:00  INF  Executed DbCommand (25ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete], [t].[Id], [t].[CreatedDate], [t].[GroupId], [t].[SoftDelete], [t].[StudentId]
+FROM [Groups] AS [g]
+LEFT JOIN (
+    SELECT [g0].[Id], [g0].[CreatedDate], [g0].[GroupId], [g0].[SoftDelete], [g0].[StudentId]
+    FROM [GroupStudents] AS [g0]
+    WHERE [g0].[GroupId] = @__groupId_0
+) AS [t] ON [g].[Id] = [t].[GroupId]
+WHERE [g].[Id] = @__groupId_0
+ORDER BY [g].[Id]
+2024-07-02 17:37:15.317 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:37:15.340 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:37:15.342 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:37:15.342 +04:00  INF  Hosting environment: Development
+2024-07-02 17:37:15.342 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:37:16.309 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:37:16.384 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 76.5141ms
+2024-07-02 17:37:16.435 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:37:16.498 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.1092ms
+2024-07-02 17:37:29.540 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:37:29.558 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:37:29.585 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:37:30.013 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:37:30.098 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:37:34.569 +04:00  INF  Executed DbCommand (51ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:37:35.909 +04:00  INF  Executed DbCommand (16ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId]
+FROM [GroupStudents] AS [g]
+WHERE [g].[GroupId] = @__groupId_0
+2024-07-02 17:37:47.393 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:37:47.418 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:37:47.420 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:37:47.420 +04:00  INF  Hosting environment: Development
+2024-07-02 17:37:47.420 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:37:48.368 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:37:48.441 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 74.8674ms
+2024-07-02 17:37:48.492 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:37:48.556 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.4165ms
+2024-07-02 17:38:03.248 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:38:03.268 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:38:03.294 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:38:03.734 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:38:03.822 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:38:04.485 +04:00  INF  Executed DbCommand (50ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:38:04.525 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId]
+FROM [GroupStudents] AS [g]
+WHERE [g].[GroupId] = @__groupId_0
+2024-07-02 17:38:04.580 +04:00  INF  Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:38:04.588 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 1290.3607ms
+2024-07-02 17:38:04.589 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:38:04.591 +04:00  ERR  Capacity is over
+2024-07-02 17:38:04.601 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0 - 404 - application/json 1352.3877ms
+2024-07-02 17:41:47.354 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:41:47.374 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:41:47.376 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:41:47.376 +04:00  INF  Hosting environment: Development
+2024-07-02 17:41:47.376 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:41:48.365 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:41:48.440 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 77.1144ms
+2024-07-02 17:41:48.494 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:41:48.559 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 64.8647ms
+2024-07-02 17:41:58.140 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:41:58.158 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:41:58.182 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:41:58.624 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:41:58.711 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:41:59.382 +04:00  INF  Executed DbCommand (51ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:41:59.445 +04:00  INF  Executed DbCommand (27ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId]
+FROM [GroupStudents] AS [g]
+WHERE [g].[GroupId] = @__groupId_0
+2024-07-02 17:41:59.454 +04:00  INF  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:41:59.618 +04:00  INF  Executed DbCommand (30ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p9='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (DbType = Boolean), @p13='?' (DbType = Int32), @p20='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = DateTime2), @p16='?' (DbType = Int32), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p27='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = DateTime2), @p23='?' (DbType = Int32), @p24='?' (Size = 4000), @p25='?' (DbType = Int32), @p26='?' (DbType = Boolean), @p35='?' (DbType = Int32), @p28='?' (Size = 4000), @p29='?' (DbType = Int32), @p30='?' (DbType = DateTime2), @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?' (DbType = Boolean), @p34='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [GroupStudents] SET [CreatedDate] = @p0, [GroupId] = @p1, [SoftDelete] = @p2, [StudentId] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+UPDATE [GroupStudents] SET [CreatedDate] = @p5, [GroupId] = @p6, [SoftDelete] = @p7, [StudentId] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+INSERT INTO [GroupStudents] ([CreatedDate], [GroupId], [SoftDelete], [StudentId])
+VALUES (@p10, @p11, @p12, @p13);
+SELECT [Id]
+FROM [GroupStudents]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+
+UPDATE [Groups] SET [Capacity] = @p14, [CreatedDate] = @p15, [EducationId] = @p16, [Name] = @p17, [RoomId] = @p18, [SoftDelete] = @p19
+WHERE [Id] = @p20;
+SELECT @@ROWCOUNT;
+
+UPDATE [Groups] SET [Capacity] = @p21, [CreatedDate] = @p22, [EducationId] = @p23, [Name] = @p24, [RoomId] = @p25, [SoftDelete] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [Students] SET [Address] = @p28, [Age] = @p29, [CreatedDate] = @p30, [Email] = @p31, [Name] = @p32, [SoftDelete] = @p33, [Surname] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+2024-07-02 17:41:59.664 +04:00  INF  Executing StatusCodeResult, setting HTTP status code 200
+2024-07-02 17:41:59.668 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 1482.5099ms
+2024-07-02 17:41:59.668 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:41:59.674 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0 - 200 0 - 1533.6126ms
+2024-07-02 17:42:10.335 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:42:10.341 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:42:10.341 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:42:10.376 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:42:10.405 +04:00  INF  Executed DbCommand (25ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:42:10.485 +04:00  INF  Executed DbCommand (26ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId]
+FROM [GroupStudents] AS [g]
+WHERE [g].[GroupId] = @__groupId_0
+2024-07-02 17:42:10.492 +04:00  INF  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:42:10.495 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 153.7432ms
+2024-07-02 17:42:10.495 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:42:10.501 +04:00  ERR  Capacity is 2
+2024-07-02 17:42:10.516 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0 - 404 - application/json 181.1377ms
+2024-07-02 17:43:19.152 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-02 17:43:19.179 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-02 17:43:19.181 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-02 17:43:19.181 +04:00  INF  Hosting environment: Development
+2024-07-02 17:43:19.181 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-02 17:43:20.133 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-02 17:43:20.212 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 81.0466ms
+2024-07-02 17:43:20.265 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-02 17:43:20.328 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.2980ms
+2024-07-02 17:43:31.927 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0
+2024-07-02 17:43:31.949 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:43:31.975 +04:00  INF  Route matched with {action = "AddtoGroup", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddtoGroup(Int32, Int32) on controller CourseAppApi.Controllers.Admin.StudentController (CourseAppApi).
+2024-07-02 17:43:32.402 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-02 17:43:32.487 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-02 17:43:33.144 +04:00  INF  Executed DbCommand (56ms) [Parameters=[@__studentId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[Age], [t].[CreatedDate], [t].[Email], [t].[Name], [t].[SoftDelete], [t].[Surname], [t0].[Id], [t0].[CreatedDate], [t0].[GroupId], [t0].[SoftDelete], [t0].[StudentId], [t0].[Id0], [t0].[Capacity], [t0].[CreatedDate0], [t0].[EducationId], [t0].[Name], [t0].[RoomId], [t0].[SoftDelete0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[Age], [s].[CreatedDate], [s].[Email], [s].[Name], [s].[SoftDelete], [s].[Surname]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__studentId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId], [g0].[Id] AS [Id0], [g0].[Capacity], [g0].[CreatedDate] AS [CreatedDate0], [g0].[EducationId], [g0].[Name], [g0].[RoomId], [g0].[SoftDelete] AS [SoftDelete0]
+    FROM [GroupStudents] AS [g]
+    INNER JOIN [Groups] AS [g0] ON [g].[GroupId] = [g0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[StudentId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-07-02 17:43:33.185 +04:00  INF  Executed DbCommand (4ms) [Parameters=[@__groupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[CreatedDate], [g].[GroupId], [g].[SoftDelete], [g].[StudentId]
+FROM [GroupStudents] AS [g]
+WHERE [g].[GroupId] = @__groupId_0
+2024-07-02 17:43:33.191 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-02 17:43:33.197 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi) in 1218.5193ms
+2024-07-02 17:43:33.197 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.StudentController.AddtoGroup (CourseAppApi)'
+2024-07-02 17:43:33.199 +04:00  ERR  Capacity is 2
+2024-07-02 17:43:33.207 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/admin/Student/AddtoGroup?groupId=11&studentId=1 - 0 - 404 - application/json 1279.9875ms

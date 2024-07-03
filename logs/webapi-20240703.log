@@ -1,0 +1,513 @@
+2024-07-03 16:38:27.537 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 16:38:27.564 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 16:38:27.566 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 16:38:27.566 +04:00  INF  Hosting environment: Development
+2024-07-03 16:38:27.566 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 16:38:28.660 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 16:38:28.738 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 79.1706ms
+2024-07-03 16:38:28.796 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 16:38:28.863 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 67.3572ms
+2024-07-03 16:38:33.140 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Education/GetAll - -
+2024-07-03 16:38:33.161 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi)'
+2024-07-03 16:38:33.171 +04:00  INF  Route matched with {action = "GetAll", controller = "Education"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.EducationController (CourseAppApi).
+2024-07-03 16:38:33.614 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 16:38:33.701 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 16:38:33.779 +04:00  INF  Education GetAll is working
+2024-07-03 16:38:34.189 +04:00  INF  Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[Name], [e].[SoftDelete]
+FROM [Educations] AS [e]
+2024-07-03 16:38:34.230 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Educations.EducationDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 16:38:34.239 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi) in 1064.6807ms
+2024-07-03 16:38:34.239 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.EducationController.GetAll (CourseAppApi)'
+2024-07-03 16:38:34.245 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Education/GetAll - - - 200 - application/json;+charset=utf-8 1104.7660ms
+2024-07-03 16:38:40.374 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetAll - -
+2024-07-03 16:38:40.377 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi)'
+2024-07-03 16:38:40.381 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 16:38:40.408 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 16:38:40.422 +04:00  INF  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 16:38:40.425 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 16:38:40.426 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi) in 45.1365ms
+2024-07-03 16:38:40.426 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi)'
+2024-07-03 16:38:40.426 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 51.9556ms
+2024-07-03 16:55:27.460 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 16:55:27.480 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 16:55:27.482 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 16:55:27.482 +04:00  INF  Hosting environment: Development
+2024-07-03 16:55:27.482 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 16:55:28.531 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 16:55:28.608 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 79.1128ms
+2024-07-03 16:55:28.659 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 16:55:28.733 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.2629ms
+2024-07-03 16:55:35.785 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=2 - -
+2024-07-03 16:55:35.801 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 16:55:35.826 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 16:55:36.265 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 16:55:36.354 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 16:55:36.588 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 16:55:36.589 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 16:55:36.960 +04:00  INF  Executed DbCommand (76ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-07-03 16:55:37.035 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 16:55:37.042 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 1212.1299ms
+2024-07-03 16:55:37.042 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 16:55:37.048 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=2 - - - 200 - application/json;+charset=utf-8 1263.5157ms
+2024-07-03 16:55:45.496 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=2&take=2 - -
+2024-07-03 16:55:45.502 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 16:55:45.502 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 16:55:45.536 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 16:55:45.537 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 16:55:45.537 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 16:55:45.549 +04:00  INF  Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2024-07-03 16:55:45.549 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 16:55:45.550 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 47.3804ms
+2024-07-03 16:55:45.550 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 16:55:45.550 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=2&take=2 - - - 200 - application/json;+charset=utf-8 53.3405ms
+2024-07-03 16:55:53.558 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetAll - -
+2024-07-03 16:55:53.559 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi)'
+2024-07-03 16:55:53.563 +04:00  INF  Route matched with {action = "GetAll", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 16:55:53.578 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 16:55:53.596 +04:00  INF  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 16:55:53.599 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 16:55:53.599 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi) in 35.6755ms
+2024-07-03 16:55:53.599 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetAll (CourseAppApi)'
+2024-07-03 16:55:53.599 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetAll - - - 200 - application/json;+charset=utf-8 40.5178ms
+2024-07-03 17:37:48.034 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 17:37:48.053 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 17:37:48.055 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 17:37:48.055 +04:00  INF  Hosting environment: Development
+2024-07-03 17:37:48.055 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 17:37:49.092 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 17:37:49.169 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 78.2209ms
+2024-07-03 17:37:49.223 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 17:37:49.296 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.0392ms
+2024-07-03 17:37:55.630 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=2 - -
+2024-07-03 17:37:55.652 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:37:55.680 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 17:37:56.128 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 17:37:56.219 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 17:37:56.709 +04:00  INF  Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 17:37:56.799 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:37:56.800 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:37:56.831 +04:00  INF  Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-07-03 17:37:56.875 +04:00  INF  Executing OkObjectResult, writing value of type 'Repository.Helpers.PaginationResponse`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 17:37:56.882 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 1198.4044ms
+2024-07-03 17:37:56.882 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:37:56.887 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=2 - - - 200 - application/json;+charset=utf-8 1257.2332ms
+2024-07-03 17:38:32.916 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=2&take=2 - -
+2024-07-03 17:38:32.946 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:38:32.947 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 17:38:32.981 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 17:38:33.063 +04:00  INF  Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 17:38:33.122 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:38:33.122 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:38:33.143 +04:00  INF  Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2024-07-03 17:38:33.145 +04:00  INF  Executing OkObjectResult, writing value of type 'Repository.Helpers.PaginationResponse`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 17:38:33.146 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 199.0347ms
+2024-07-03 17:38:33.146 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:38:33.146 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=2&take=2 - - - 200 - application/json;+charset=utf-8 230.2462ms
+2024-07-03 17:38:39.790 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=4 - -
+2024-07-03 17:38:39.790 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:38:39.790 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 17:38:39.807 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 17:38:39.888 +04:00  INF  Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 17:38:39.897 +04:00  INF  Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-07-03 17:38:39.898 +04:00  INF  Executing OkObjectResult, writing value of type 'Repository.Helpers.PaginationResponse`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 17:38:39.898 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 107.7651ms
+2024-07-03 17:38:39.898 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:38:39.899 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=4 - - - 200 - application/json;+charset=utf-8 108.6217ms
+2024-07-03 17:42:46.323 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 17:42:46.345 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 17:42:46.347 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 17:42:46.347 +04:00  INF  Hosting environment: Development
+2024-07-03 17:42:46.347 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 17:42:47.360 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 17:42:47.438 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 79.7096ms
+2024-07-03 17:42:47.493 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 17:42:47.556 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.0387ms
+2024-07-03 17:42:57.412 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=4 - -
+2024-07-03 17:42:57.468 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:42:57.490 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 17:42:57.930 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 17:42:58.021 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 17:42:58.533 +04:00  INF  Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 17:42:58.624 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:42:58.624 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:42:58.665 +04:00  INF  Executed DbCommand (33ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-07-03 17:42:58.708 +04:00  INF  Executing OkObjectResult, writing value of type 'Repository.Helpers.PaginationResponse`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 17:42:58.717 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 1223.7044ms
+2024-07-03 17:42:58.717 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:42:58.723 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=4 - - - 200 - application/json;+charset=utf-8 1310.6339ms
+2024-07-03 17:44:22.978 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 17:44:22.999 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 17:44:23.001 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 17:44:23.001 +04:00  INF  Hosting environment: Development
+2024-07-03 17:44:23.001 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 17:44:24.010 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 17:44:24.089 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 80.7737ms
+2024-07-03 17:44:24.144 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 17:44:24.218 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.5566ms
+2024-07-03 17:44:31.319 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=2 - -
+2024-07-03 17:44:31.344 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:44:31.366 +04:00  INF  Route matched with {action = "GetPaginateDatas", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPaginateDatas(Int32, Int32) on controller CourseAppApi.Controllers.Admin.GroupController (CourseAppApi).
+2024-07-03 17:44:31.803 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 17:44:31.895 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 17:44:32.387 +04:00  INF  Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+2024-07-03 17:44:32.477 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:44:32.478 +04:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-07-03 17:44:32.508 +04:00  INF  Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[Capacity], [g].[CreatedDate], [g].[EducationId], [g].[Name], [g].[RoomId], [g].[SoftDelete]
+FROM [Groups] AS [g]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-07-03 17:44:32.551 +04:00  INF  Executing OkObjectResult, writing value of type 'Repository.Helpers.PaginationResponse`1[[Service.DTOs.Admin.Groups.GroupDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 17:44:32.558 +04:00  INF  Executed action CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi) in 1189.0328ms
+2024-07-03 17:44:32.558 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.Admin.GroupController.GetPaginateDatas (CourseAppApi)'
+2024-07-03 17:44:32.564 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/admin/Group/GetPaginateDatas?page=1&take=2 - - - 200 - application/json;+charset=utf-8 1244.8849ms
+2024-07-03 18:29:07.438 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:29:07.530 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 18:29:07.546 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:29:26.901 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:29:26.994 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 18:29:27.012 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:29:27.253 +04:00  INF  Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-07-03 18:29:27.273 +04:00  INF  Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-07-03 18:29:27.281 +04:00  INF  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-07-03 18:29:49.264 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:29:49.358 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 18:29:49.374 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:30:08.113 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 18:30:08.202 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 18:30:08.379 +04:00  INF  Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-07-03 18:30:08.394 +04:00  INF  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-07-03 18:30:08.401 +04:00  INF  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-07-03 18:30:08.405 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-07-03 18:30:08.419 +04:00  INF  Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-07-03 18:30:08.427 +04:00  INF  Applying migration '20240703142949_CreateAppUser'.
+2024-07-03 18:30:08.509 +04:00  INF  Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2024-07-03 18:30:08.512 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [FullName] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2024-07-03 18:30:08.516 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2024-07-03 18:30:08.519 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-07-03 18:30:08.523 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-07-03 18:30:08.527 +04:00  INF  Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-07-03 18:30:08.530 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-07-03 18:30:08.533 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2024-07-03 18:30:08.536 +04:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2024-07-03 18:30:08.538 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2024-07-03 18:30:08.539 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2024-07-03 18:30:08.541 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2024-07-03 18:30:08.542 +04:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2024-07-03 18:30:08.544 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2024-07-03 18:30:08.546 +04:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240703142949_CreateAppUser', N'6.0.31');
+2024-07-03 19:35:29.916 +04:00  INF  User profile is available. Using '/Users/fatimagaykhanova/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-07-03 19:35:30.173 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 19:35:30.173 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 19:35:30.175 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 19:35:30.175 +04:00  INF  Hosting environment: Development
+2024-07-03 19:35:30.175 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 19:35:31.229 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 19:35:31.306 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 79.2115ms
+2024-07-03 19:35:31.359 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 19:35:31.433 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.0772ms
+2024-07-03 19:38:13.702 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 117
+2024-07-03 19:38:13.796 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:38:13.821 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:38:14.413 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 19:38:14.498 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 19:38:15.000 +04:00  INF  Executed DbCommand (61ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-03 19:38:15.045 +04:00  INF  Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-03 19:38:15.174 +04:00  INF  Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-07-03 19:38:15.204 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.Helpers.Account.RegisterResponse'.
+2024-07-03 19:38:15.210 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 1386.4717ms
+2024-07-03 19:38:15.211 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:38:15.217 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 117 - 200 - application/json;+charset=utf-8 1515.3627ms
+2024-07-03 19:38:41.980 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 118
+2024-07-03 19:38:42.063 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:38:42.067 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:38:42.120 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 19:38:42.192 +04:00  INF  Executed DbCommand (68ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-03 19:38:42.219 +04:00  INF  Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-03 19:38:42.219 +04:00  WRN  User validation failed: DuplicateUserName.
+2024-07-03 19:38:42.220 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Service.Helpers.Account.RegisterResponse'.
+2024-07-03 19:38:42.220 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 153.031ms
+2024-07-03 19:38:42.220 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:38:42.221 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 118 - 400 - application/json;+charset=utf-8 240.9762ms
+2024-07-03 19:39:21.192 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 116
+2024-07-03 19:39:21.224 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:39:21.225 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:39:21.242 +04:00  WRN  User password validation failed: PasswordTooShort;PasswordRequiresNonAlphanumeric;PasswordRequiresDigit.
+2024-07-03 19:39:21.242 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Service.Helpers.Account.RegisterResponse'.
+2024-07-03 19:39:21.242 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 17.3563ms
+2024-07-03 19:39:21.242 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:39:21.242 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 116 - 400 - application/json;+charset=utf-8 52.1328ms
+2024-07-03 19:53:45.712 +04:00  INF  User profile is available. Using '/Users/fatimagaykhanova/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-07-03 19:53:45.981 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 19:53:45.981 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 19:53:45.983 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 19:53:45.983 +04:00  INF  Hosting environment: Development
+2024-07-03 19:53:45.983 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 19:53:47.057 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 19:53:47.137 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 81.2644ms
+2024-07-03 19:53:47.190 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 19:53:47.264 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.8380ms
+2024-07-03 19:54:26.075 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 116
+2024-07-03 19:54:26.107 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:54:26.133 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:54:26.344 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-07-03 19:54:26.351 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 214.437ms
+2024-07-03 19:54:26.352 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:54:26.354 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 116 - 400 - application/json;+charset=utf-8 281.4867ms
+2024-07-03 19:54:54.591 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 121
+2024-07-03 19:54:54.597 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:54:54.598 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:54:54.653 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-07-03 19:54:54.653 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 55.4169ms
+2024-07-03 19:54:54.654 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:54:54.654 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 121 - 400 - application/json;+charset=utf-8 62.8536ms
+2024-07-03 19:56:26.370 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 112
+2024-07-03 19:56:26.400 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:56:26.401 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:56:26.415 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-07-03 19:56:26.416 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 14.9001ms
+2024-07-03 19:56:26.416 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:56:26.416 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 112 - 400 - application/json;+charset=utf-8 45.7572ms
+2024-07-03 19:57:08.148 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 114
+2024-07-03 19:57:08.201 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:57:08.201 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:57:08.248 +04:00  WRN  User password validation failed: PasswordTooShort;PasswordRequiresNonAlphanumeric;PasswordRequiresLower;PasswordRequiresUpper.
+2024-07-03 19:57:08.249 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Service.Helpers.Account.RegisterResponse'.
+2024-07-03 19:57:08.250 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 48.8141ms
+2024-07-03 19:57:08.250 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:57:08.250 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 114 - 400 - application/json;+charset=utf-8 102.4287ms
+2024-07-03 19:57:59.502 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 122
+2024-07-03 19:57:59.531 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:57:59.531 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:57:59.975 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 19:58:00.067 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 19:58:00.573 +04:00  INF  Executed DbCommand (50ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-03 19:58:00.660 +04:00  INF  Executed DbCommand (54ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-03 19:58:00.797 +04:00  INF  Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-07-03 19:58:00.827 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.Helpers.Account.RegisterResponse'.
+2024-07-03 19:58:00.828 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 1296.0632ms
+2024-07-03 19:58:00.828 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:58:00.832 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 122 - 200 - application/json;+charset=utf-8 1330.7450ms
+2024-07-03 19:58:13.323 +04:00  INF  Request starting HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 122
+2024-07-03 19:58:13.324 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:58:13.324 +04:00  INF  Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Service.DTOs.Account.RegisterDto) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 19:58:13.355 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 19:58:13.363 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-03 19:58:13.381 +04:00  INF  Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-07-03 19:58:13.381 +04:00  WRN  User validation failed: DuplicateUserName;DuplicateEmail.
+2024-07-03 19:58:13.381 +04:00  INF  Executing BadRequestObjectResult, writing value of type 'Service.Helpers.Account.RegisterResponse'.
+2024-07-03 19:58:13.381 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi) in 57.563ms
+2024-07-03 19:58:13.381 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.SignUp (CourseAppApi)'
+2024-07-03 19:58:13.382 +04:00  INF  Request finished HTTP/1.1 POST https://localhost:7031/api/Account/SignUp application/json 122 - 400 - application/json;+charset=utf-8 58.7150ms
+2024-07-03 20:10:06.346 +04:00  INF  User profile is available. Using '/Users/fatimagaykhanova/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-07-03 20:10:06.589 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 20:10:06.589 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 20:10:06.591 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 20:10:06.591 +04:00  INF  Hosting environment: Development
+2024-07-03 20:10:06.591 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 20:10:07.601 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 20:10:07.676 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 77.0211ms
+2024-07-03 20:10:07.729 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 20:10:07.802 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.6828ms
+2024-07-03 20:10:12.465 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/Account/GetAllUsers - -
+2024-07-03 20:10:12.487 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.GetAllUsers (CourseAppApi)'
+2024-07-03 20:10:12.498 +04:00  INF  Route matched with {action = "GetAllUsers", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 20:10:13.069 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 20:10:13.156 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 20:10:13.555 +04:00  INF  Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-07-03 20:10:13.631 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Account.UserDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-07-03 20:10:13.638 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.GetAllUsers (CourseAppApi) in 1137.1019ms
+2024-07-03 20:10:13.638 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.GetAllUsers (CourseAppApi)'
+2024-07-03 20:10:13.645 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/Account/GetAllUsers - - - 200 - application/json;+charset=utf-8 1179.5427ms
+2024-07-03 20:23:52.410 +04:00  INF  User profile is available. Using '/Users/fatimagaykhanova/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-07-03 20:23:52.637 +04:00  INF  Now listening on: https://localhost:7031
+2024-07-03 20:23:52.637 +04:00  INF  Now listening on: http://localhost:5295
+2024-07-03 20:23:52.639 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-07-03 20:23:52.639 +04:00  INF  Hosting environment: Development
+2024-07-03 20:23:52.639 +04:00  INF  Content root path: /Users/fatimagaykhanova/Desktop/CourseAppApi/CourseAppApi/
+2024-07-03 20:23:53.706 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/index.html - -
+2024-07-03 20:23:53.783 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/index.html - - - 200 - text/html;charset=utf-8 78.9285ms
+2024-07-03 20:23:53.835 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - -
+2024-07-03 20:23:53.909 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.7802ms
+2024-07-03 20:24:01.883 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/Account/GetUserByUsername?username=Fatima25 - -
+2024-07-03 20:24:01.912 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.GetUserByUsername (CourseAppApi)'
+2024-07-03 20:24:01.935 +04:00  INF  Route matched with {action = "GetUserByUsername", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserByUsername(System.String) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 20:24:02.516 +04:00  WRN  No store type was specified for the decimal property 'Salary' on entity type 'Teacher'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-07-03 20:24:02.607 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 20:24:03.111 +04:00  INF  Executed DbCommand (51ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-03 20:24:03.182 +04:00  INF  Executing OkObjectResult, writing value of type 'Service.DTOs.Account.UserDto'.
+2024-07-03 20:24:03.188 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.GetUserByUsername (CourseAppApi) in 1249.5093ms
+2024-07-03 20:24:03.189 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.GetUserByUsername (CourseAppApi)'
+2024-07-03 20:24:03.195 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/Account/GetUserByUsername?username=Fatima25 - - - 200 - application/json;+charset=utf-8 1312.0127ms
+2024-07-03 20:24:08.481 +04:00  INF  Request starting HTTP/1.1 GET https://localhost:7031/api/Account/GetUserByUsername?username=Fatima256 - -
+2024-07-03 20:24:08.485 +04:00  INF  Executing endpoint 'CourseAppApi.Controllers.UI.AccountController.GetUserByUsername (CourseAppApi)'
+2024-07-03 20:24:08.485 +04:00  INF  Route matched with {action = "GetUserByUsername", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserByUsername(System.String) on controller CourseAppApi.Controllers.UI.AccountController (CourseAppApi).
+2024-07-03 20:24:08.522 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: MigrationsAssembly=Repository 
+2024-07-03 20:24:08.530 +04:00  INF  Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-07-03 20:24:08.531 +04:00  INF  Executed action CourseAppApi.Controllers.UI.AccountController.GetUserByUsername (CourseAppApi) in 45.5175ms
+2024-07-03 20:24:08.531 +04:00  INF  Executed endpoint 'CourseAppApi.Controllers.UI.AccountController.GetUserByUsername (CourseAppApi)'
+2024-07-03 20:24:08.533 +04:00  ERR  Username Fatima256 not found
+2024-07-03 20:24:08.533 +04:00  INF  Request finished HTTP/1.1 GET https://localhost:7031/api/Account/GetUserByUsername?username=Fatima256 - - - 404 - application/json 52.5521ms
